@@ -32,7 +32,7 @@ paths:
       description: Collect Transaction Objects
       operationId: CollectTransactionObjects
       tags: 
-        - Collect Transaction Objects
+        - Transaction
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
@@ -72,7 +72,7 @@ paths:
       description: Collect Transaction Data
       operationId: CollectTransactionData
       tags: 
-        - Collect Transaction Data
+        - Transaction
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
