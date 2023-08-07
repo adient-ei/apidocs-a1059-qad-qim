@@ -32,7 +32,7 @@ paths:
       description: Collect Transaction Objects
       operationId: CollectTransactionObjects
       tags: 
-        - Transaction
+        - Europe Endpoints
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
@@ -72,7 +72,7 @@ paths:
       description: Collect Transaction Data
       operationId: CollectTransactionData
       tags: 
-        - Transaction
+        - Europe Endpoints
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
@@ -112,7 +112,7 @@ paths:
       description: Inbound Status
       operationId: InboundStatus
       tags: 
-        - Inbound Status
+        - Europe Endpoints
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
@@ -152,7 +152,7 @@ paths:
       description: Publish Table Objects 
       operationId: PublishTableObjects
       tags: 
-        - Publish Table Objects 
+        - Europe Endpoints 
       parameters:
         - $ref: '#/components/parameters/region'
       responses:
@@ -186,6 +186,205 @@ paths:
                   message:
                     type: string
                     example: "Invalid Request parameter: region (eu or na)"                    
+  /InventoryTransfer:
+    post:
+      summary: Inventory Transfer
+      description: Inventory Transfer
+      operationId: InventoryTransfer
+      tags: 
+        - North America Endpoints
+      parameters:
+        - $ref: '#/components/parameters/region'
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 401
+                  message:
+                    type: string
+                    example: Invalid Authorization key for resource
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 400
+                  message:
+                    type: string
+                    example: "Invalid Request parameter: region (eu or na)"
+  /PackTransfer:
+    post:
+      summary: Pack Transfer
+      description: Pack Transfer
+      operationId: PackTransfer
+      tags: 
+        - North America Endpoints
+      parameters:
+        - $ref: '#/components/parameters/region'
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 401
+                  message:
+                    type: string
+                    example: Invalid Authorization key for resource
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 400
+                  message:
+                    type: string
+                    example: "Invalid Request parameter: region (eu or na)"
+  /Errors:
+    put:
+      summary: ReProcess Errors
+      description: ReProcess Errors
+      operationId: ReProcessErrors
+      tags: 
+        - North America Endpoints
+      parameters:
+        - $ref: '#/components/parameters/region'
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 401
+                  message:
+                    type: string
+                    example: Invalid Authorization key for resource
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 400
+                  message:
+                    type: string
+                    example: "Invalid Request parameter: region (eu or na)"
+    delete:
+      summary: Delete Errors
+      description: Delete Errors
+      operationId: DeleteErrors
+      tags: 
+        - North America Endpoints
+      parameters:
+        - $ref: '#/components/parameters/region'
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 401
+                  message:
+                    type: string
+                    example: Invalid Authorization key for resource
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 400
+                  message:
+                    type: string
+                    example: "Invalid Request parameter: region (eu or na)"
+  /Status:
+    get:
+      summary: Check Status
+      description: Check Status
+      operationId: CheckStatus
+      tags: 
+        - North America Endpoints
+      parameters:
+        - $ref: '#/components/parameters/region'
+      responses:
+        200:
+          description: OK
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 401
+                  message:
+                    type: string
+                    example: Invalid Authorization key for resource
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                description: ""
+                properties:
+                  code:
+                    type: string
+                    example: 400
+                  message:
+                    type: string
+                    example: "Invalid Request parameter: region (eu or na)"
 components:
   securitySchemes:
     ApiKeyAuth:
